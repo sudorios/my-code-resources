@@ -5,28 +5,34 @@
     </h2>
     <div class="max-w-2xl mx-auto text-center">
       <p class="text-slate-400 mb-6">
-        myCodeResources es una plataforma integral diseñada para reunir y organizar herramientas e información
-        esenciales para ayudar a los desarrolladores a lo largo de sus proyectos.
+        myCodeResources es una plataforma integral diseñada para reunir y
+        organizar herramientas e información esenciales para ayudar a los
+        desarrolladores a lo largo de sus proyectos.
       </p>
       @if(!isMobile){
       <div>
         @if(!isCategorySelected){
         <div
-          class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500">
-          <img src="/assets/click_derecho.png" alt="Mouse" class="w-8 h-8" />
-          <p class="text-lg font-semibold ml-2">Selecciona una categoría</p>
+          class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500"
+        >
+          <p class="text-lg font-semibold ml-2">
+            Selecciona una categoría dando click izquierdo
+          </p>
         </div>
         } @else {
         <div
-          class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500">
+          class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500"
+        >
           <div class="flex flex-col items-center">
             <div class="flex items-center mb-2">
-              <img src="/assets/click_derecho.png" alt="Icono Página" class="w-8 h-8" />
-              <p class="text-lg font-semibold ml-2">Ver Página</p>
+              <p class="text-lg font-semibold ml-2">
+                Haz clic izquierdo para ir a la página
+              </p>
             </div>
             <div class="flex items-center">
-              <img src="/assets/click_derecho.png" alt="Icono Descripción" class="w-8 h-8 mirror" />
-              <p class="text-lg font-semibold ml-2">Ver descripción</p>
+              <p class="text-lg font-semibold ml-2">
+                Haz clic derecho para ver la descripción
+              </p>
             </div>
           </div>
         </div>
@@ -36,47 +42,62 @@
       <div>
         @if(!isCategorySelected){
         <div
-          class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500">
+          class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500"
+        >
           <img src="/assets/touch.png" alt="Mouse" class="w-8 h-8" />
           <p class="text-lg font-semibold ml-2">Selecciona una categoría</p>
         </div>
         } @else {
         <div
-          class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500">
+          class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500"
+        >
           <div class="flex flex-col items-center">
             <div class="flex items-center mb-2">
               <img src="/assets/touch.png" alt="Icono Página" class="w-8 h-8" />
-              <p class="text-lg font-semibold ml-2">Manten pulsado para ver descripción</p>
+              <p class="text-lg font-semibold ml-2">
+                Manten pulsado para ver descripción
+              </p>
             </div>
           </div>
         </div>
         }
-      </div> }
+      </div>
+      }
     </div>
   </section>
   <div class="relative border-b pt-0 pb-14">
     <div>
       <div class="flex items-center mb-6">
-        <h1 class="text-3xl font-bold mr-2 text-white">
-          Categorias
-        </h1>
+        <h1 class="text-3xl font-bold mr-2 text-white">Categorias</h1>
         <div class="border-b border-slate-00 flex-1"></div>
       </div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="flex flex-wrap justify-center gap-4">
+
+    >
       @for (item of category; track item.id) {
-      <a class="common-class group transition-colors duration-300 relative" [routerLink]="['/categoria', item.id]"
-        [ngClass]="{'border-slate-600 text-slate-300': state === item.id}" (click)="updateEstado(item.id)">
+      <a
+        class="common-class group transition-colors duration-300 relative p-6"
+        [routerLink]="['/categoria', item.id]"
+        [ngClass]="{ 'border-slate-600 text-slate-300': state === item.id }"
+        (click)="updateEstado(item.id)"
+      >
         @if(state === item.id) {
-        <div class="absolute top-0 right-0 mt-2 mr-2 w-3 h-3 bg-green-500 rounded-full"></div>
+        <div
+          class="absolute top-0 right-0 mt-2 mr-2 w-3 h-3 bg-green-500 rounded-full"
+        ></div>
         }
         {{ item.name }}
       </a>
       }
     </div>
   </div>
-  <app-category [categories]="categories" [filteredData]="filteredData" [estado]="state"
-    [subcategoryNames]="subcategoryNames">
+  <app-category
+    [categories]="categories"
+    [filteredData]="filteredData"
+    [estado]="state"
+    [subcategoryNames]="subcategoryNames"
+  >
   </app-category>
   <section class="lg:max-w-full md:max-w-2xl">
     <div class="flex items-center mb-6 mt-10">
@@ -85,31 +106,45 @@
       </h1>
       <div class="border-b border-slate-00 flex-1"></div>
     </div>
-    <div class="bg-gray-800 p-6 mt-10 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-      <div class="rounded-lg overflow-hidden "> <img src="/assets/posgress.png" alt="Postgres.new"
+    <div
+      class="bg-gray-800 p-6 mt-10 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
+    >
+      <div class="rounded-lg overflow-hidden">
+        <img
+          src="/assets/posgress.png"
+          alt="Postgres.new"
           class="object-cover w-full h-50 transition hover:scale-100 duration-500 sm:h-58 md:scale-110 md:group-hover:scale-105"
-          loading="lazy">
+          loading="lazy"
+        />
         <div class="pt-9">
           <h3 class="text-xl font-semibold text-gold">Postgres.new</h3>
-          <p class="text-gray-800 dark:text-gray-300 mt-1"> Herramienta que simplifica la creación y gestión de bases de
-            datos. Con su
-            interfaz intuitiva y potente inteligencia artificial, puedes crear y modificar tablas con lenguaje natural,
-            generar datos de ejemplo, visualizar diagramas de relaciones y exportar tus bases de datos para desplegarlas
-            donde quieras.</p>
+          <p class="text-gray-800 dark:text-gray-300 mt-1">
+            Herramienta que simplifica la creación y gestión de bases de datos.
+            Con su interfaz intuitiva y potente inteligencia artificial, puedes
+            crear y modificar tablas con lenguaje natural, generar datos de
+            ejemplo, visualizar diagramas de relaciones y exportar tus bases de
+            datos para desplegarlas donde quieras.
+          </p>
         </div>
       </div>
-      <div class="rounded-lg overflow-hidden "> <img src="/assets/pythontutor.png" alt="pythontutor"
+      <div class="rounded-lg overflow-hidden">
+        <img
+          src="/assets/pythontutor.png"
+          alt="pythontutor"
           class="object-cover w-full h-50 transition hover:scale-100 duration-500 sm:h-58 md:scale-110 md:group-hover:scale-105"
-          loading="lazy">
+          loading="lazy"
+        />
         <div class="pt-9">
           <h3 class="text-xl font-semibold text-gold">Python Tutor</h3>
-          <p class="text-gray-800 dark:text-gray-300 mt-1"> Herramienta educativa en línea que permite a los usuarios
-            visualizar la ejecución de código Python y otros lenguajes de programación paso a paso. Está diseñada para
-            ayudar a estudiantes, principiantes y desarrolladores a comprender cómo se ejecuta su código.</p>
+          <p class="text-gray-800 dark:text-gray-300 mt-1">
+            Herramienta educativa en línea que permite a los usuarios visualizar
+            la ejecución de código Python y otros lenguajes de programación paso
+            a paso. Está diseñada para ayudar a estudiantes, principiantes y
+            desarrolladores a comprender cómo se ejecuta su código.
+          </p>
         </div>
       </div>
     </div>
   </section>
-
 </main>
 <app-description></app-description>

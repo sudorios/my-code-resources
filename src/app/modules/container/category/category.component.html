@@ -1,92 +1,166 @@
 <div>
-    @switch (estado) {
-    @case (1) {
-    <div class="animate-fade-right animate-once">
-      @for (subcategory of categories[0].subcategories; track subcategoryNames) {
-      <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
-        <h2
-          class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2">
-          {{ subcategoryNames[subcategory || ''] }}
-        </h2>
-        <div class="flex justify-center">
-          <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
-            @for (item of filteredData[subcategory]; track item.name) {
-            <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
-              [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
-              {{ item.name }}
-            </a>
-            }
-          </ul>
-        </div>
+  @switch (estado) { @case (1) {
+  <div class="animate-fade-right animate-once">
+    @for (subcategory of categories[0].subcategories; track subcategoryNames) {
+    <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
+      <h2
+        class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2"
+      >
+        {{ subcategoryNames[subcategory || ""] }}
+      </h2>
+      <div class="flex justify-center">
+        <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
+          @for (item of filteredData[subcategory]; track item.name) {
+          <a
+            class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
+            [href]="item.url"
+            target="_blank"
+            (contextmenu)="handleRightClick($event, item)"
+          >
+            {{ item.name }}
+          </a>
+          }
+        </ul>
       </div>
-      }
     </div>
-    }
-    @case (2) {
-    <div class="animate-fade-right animate-once">
-      @for (subcategory of categories[1].subcategories; track subcategoryNames) {
-      <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
-        <h2
-          class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2">
-          {{ subcategoryNames[subcategory || ''] }}
-        </h2>
-        <div class="flex justify-center">
-          <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
-            @for (item of filteredData[subcategory]; track item.name) {
-            <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
-              [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
-              {{ item.name }}
-            </a>
-            }
-          </ul>
-        </div>
-      </div>
-      }
-    </div>
-    }
-    @case (3) {
-    <div class="animate-fade-right animate-once">
-      @for (subcategory of categories[2].subcategories; track subcategoryNames) {
-      <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
-        <h2
-          class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2">
-          {{ subcategoryNames[subcategory || ''] }}
-        </h2>
-        <div class="flex justify-center">
-          <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
-            @for (item of filteredData[subcategory]; track item.name) {
-            <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
-              [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
-              {{ item.name }}
-            </a>
-            }
-          </ul>
-        </div>
-      </div>
-      }
-    </div>
-    }
-    @case (4) {
-    <div class="animate-fade-right animate-once">
-      @for (subcategory of categories[3].subcategories; track subcategoryNames) {
-      <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
-        <h2
-          class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2">
-          {{ subcategoryNames[subcategory || ''] }}
-        </h2>
-        <div class="flex justify-center">
-          <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
-            @for (item of filteredData[subcategory]; track item.name) {
-            <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
-              [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)" (touchstart)="handleTouchStart($event, item)" (touchend)="handleTouchEnd()">
-              {{ item.name }}
-            </a>
-            }
-          </ul>
-        </div>
-      </div>
-      }
-    </div>
-    }
     }
   </div>
+  } @case (2) {
+  <div class="animate-fade-right animate-once">
+    @for (subcategory of categories[1].subcategories; track subcategoryNames) {
+    <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
+      <h2
+        class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2"
+      >
+        {{ subcategoryNames[subcategory || ""] }}
+      </h2>
+      <div class="flex justify-center">
+        <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
+          @for (item of filteredData[subcategory]; track item.name) {
+          <a
+            class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
+            [href]="item.url"
+            target="_blank"
+            (contextmenu)="handleRightClick($event, item)"
+          >
+            {{ item.name }}
+          </a>
+          }
+        </ul>
+      </div>
+    </div>
+    }
+  </div>
+  } @case (3) {
+  <div class="animate-fade-right animate-once">
+    @for (subcategory of categories[2].subcategories; track subcategoryNames) {
+    <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
+      <h2
+        class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2"
+      >
+        {{ subcategoryNames[subcategory || ""] }}
+      </h2>
+      <div class="flex justify-center">
+        <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
+          @for (item of filteredData[subcategory]; track item.name) {
+          <a
+            class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
+            [href]="item.url"
+            target="_blank"
+            (contextmenu)="handleRightClick($event, item)"
+          >
+            {{ item.name }}
+          </a>
+          }
+        </ul>
+      </div>
+    </div>
+    }
+  </div>
+  } @case (4) {
+  <div class="animate-fade-right animate-once">
+    @for (subcategory of categories[3].subcategories; track subcategoryNames) {
+    <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
+      <h2
+        class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2"
+      >
+        {{ subcategoryNames[subcategory || ""] }}
+      </h2>
+      <div class="flex justify-center">
+        <ul class="flex flex-wrap justify-center gap-4">
+          @for (item of filteredData[subcategory]; track item.name) {
+          <a
+            class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
+            [href]="item.url"
+            target="_blank"
+            (contextmenu)="handleRightClick($event, item)"
+            (touchstart)="handleTouchStart($event, item)"
+            (touchend)="handleTouchEnd()"
+          >
+            {{ item.name }}
+          </a>
+          }
+        </ul>
+      </div>
+    </div>
+    }
+  </div>
+
+  } @case (5) {
+  <div class="animate-fade-right animate-once">
+    @for (subcategory of categories[4].subcategories; track subcategoryNames) {
+    <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
+      <h2
+        class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2"
+      >
+        {{ subcategoryNames[subcategory || ""] }}
+      </h2>
+      <div class="flex justify-center">
+        <ul class="flex flex-wrap justify-center gap-4">
+          @for (item of filteredData[subcategory]; track item.name) {
+          <a
+            class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
+            [href]="item.url"
+            target="_blank"
+            (contextmenu)="handleRightClick($event, item)"
+            (touchstart)="handleTouchStart($event, item)"
+            (touchend)="handleTouchEnd()"
+          >
+            {{ item.name }}
+          </a>
+          }
+        </ul>
+      </div>
+    </div>
+    }
+  </div>
+  }  @case (6) {
+  <div class="animate-fade-right animate-once">
+    @for (subcategory of categories[5].subcategories; track subcategoryNames) {
+    <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
+      <h2
+        class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2"
+      >
+        {{ subcategoryNames[subcategory || ""] }}
+      </h2>
+      <div class="flex justify-center">
+        <ul class="flex flex-wrap justify-center gap-4">
+          @for (item of filteredData[subcategory]; track item.name) {
+          <a
+            class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
+            [href]="item.url"
+            target="_blank"
+            (contextmenu)="handleRightClick($event, item)"
+            (touchstart)="handleTouchStart($event, item)"
+            (touchend)="handleTouchEnd()"
+          >
+            {{ item.name }}
+          </a>
+          }
+        </ul>
+      </div>
+    </div>
+    }
+  </div>
+  } }
+</div>

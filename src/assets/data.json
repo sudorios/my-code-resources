@@ -414,5 +414,301 @@
     "category": "other",
     "subcategory": "dba",
     "description": "Herramienta en línea para crear y gestionar bases de datos con inteligencia artificial."
+  },
+  {
+    "id": 53,
+    "name": "ChatGPT Free",
+    "url": "https://chat.openai.com/",
+    "category": "IA",
+    "subcategory": "chats",
+    "description": "Chat conversacional de OpenAI, permite interactuar con un modelo de lenguaje avanzado de manera gratuita (requiere registro)."
+  },
+  {
+    "id": 54,
+    "name": "Google Gemini",
+    "url": "https://gemini.google.com/",
+    "category": "IA",
+    "subcategory": "chats",
+    "description": "Asistente conversacional de Google basado en IA, gratuito con cuenta de Google."
+  },
+  {
+    "id": 55,
+    "name": "Perplexity AI",
+    "url": "https://www.perplexity.ai/",
+    "category": "IA",
+    "subcategory": "chats",
+    "description": "Buscador y chat de IA que responde preguntas y genera resúmenes, gratuito con funciones avanzadas."
+  },
+  {
+    "id": 56,
+    "name": "Craiyon (ex DALL-E Mini)",
+    "url": "https://www.craiyon.com/",
+    "category": "IA",
+    "subcategory": "generate_imagesVideos",
+    "description": "Generador de imágenes por IA a partir de texto, completamente gratuito y sin registro."
+  },
+  {
+    "id": 57,
+    "name": "Bing Image Creator",
+    "url": "https://www.bing.com/images/create",
+    "category": "IA",
+    "subcategory": "generate_imagesVideos",
+    "description": "Creador de imágenes por IA de Microsoft, gratis con cuenta de Microsoft."
+  },
+  {
+    "id": 58,
+    "name": "Playground AI (Stable Diffusion Web)",
+    "url": "https://playgroundai.com/",
+    "category": "IA",
+    "subcategory": "generate_imagesVideos",
+    "description": "Generador de imágenes con modelos IA como Stable Diffusion, gratuito con registro."
+  },
+  {
+    "id": 59,
+    "name": "Kaiber",
+    "url": "https://kaiber.ai/",
+    "category": "IA",
+    "subcategory": "generate_imagesVideos",
+    "description": "Generador de videos por IA, ofrece versión gratuita limitada tras registro."
+  },
+  {
+    "id": 60,
+    "name": "Pika Labs",
+    "url": "https://pika.art/",
+    "category": "IA",
+    "subcategory": "generate_imagesVideos",
+    "description": "Generador de videos por IA, gratis con registro y funciones limitadas."
+  },
+  {
+    "id": 61,
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io/",
+    "category": "IA",
+    "subcategory": "generateAudio",
+    "description": "Generador de voz por IA, permite crear audios con voces realistas en varios idiomas, versión gratuita limitada."
+  },
+  {
+    "id": 62,
+    "name": "Voicemod Text to Song",
+    "url": "https://www.voicemod.net/text-to-song/",
+    "category": "IA",
+    "subcategory": "generateAudio",
+    "description": "Convierte texto en canciones usando IA, gratuito y sin registro."
+  },
+  {
+    "id": 63,
+    "name": "Melobytes",
+    "url": "https://melobytes.com/",
+    "category": "IA",
+    "subcategory": "generateAudio",
+    "description": "Herramienta para crear música, voz y efectos a partir de texto o imágenes usando IA, gratis con funciones limitadas."
+  },
+  {
+    "id": 64,
+    "name": "Notion AI",
+    "url": "https://www.notion.so/product/ai",
+    "category": "IA",
+    "subcategory": "generateAudio",
+    "description": "Asistente de escritura por IA integrado en Notion, plan gratuito con límite de usos mensuales."
+  },
+  {
+    "id": 65,
+    "name": "Copy.ai",
+    "url": "https://www.copy.ai/",
+    "category": "IA",
+    "subcategory": "generateText",
+    "description": "Generador de textos y copys para marketing, blogs y más, plan gratuito limitado."
+  },
+  {
+    "id": 66,
+    "name": "Rytr",
+    "url": "https://rytr.me/",
+    "category": "IA",
+    "subcategory": "generateText",
+    "description": "Herramienta de generación de textos por IA, ofrece plan gratuito con límite de caracteres mensuales."
+  },
+  {
+    "id": 67,
+    "name": "Remove.bg",
+    "url": "https://www.remove.bg/",
+    "category": "IA",
+    "subcategory": "others",
+    "description": "Elimina el fondo de imágenes automáticamente usando IA, gratis con resolución limitada."
+  },
+  {
+    "id": 68,
+    "name": "Cleanup.pictures",
+    "url": "https://cleanup.pictures/",
+    "category": "IA",
+    "subcategory": "others",
+    "description": "Elimina objetos no deseados de imágenes usando IA, gratuito con resolución estándar."
+  },
+  {
+    "id": 69,
+    "name": "Cambridge Dictionary",
+    "url": "https://dictionary.cambridge.org",
+    "category": "english",
+    "subcategory": "grammarVocabulary",
+    "description": "Diccionario de Cambridge, ideal para buscar definiciones, pronunciaciones y ejemplos de uso en inglés."
+  },
+  {
+    "id": 70,
+    "name": "Vocabulary.com",
+    "url": "https://www.vocabulary.com",
+    "category": "english",
+    "subcategory": "grammarVocabulary",
+    "description": "Plataforma interactiva para aprender y practicar vocabulario en inglés de manera divertida y efectiva."
+  },
+  {
+    "id": 71,
+    "name": "Merriam-Webster",
+    "url": "https://www.merriam-webster.com",
+    "category": "english",
+    "subcategory": "grammarVocabulary",
+    "description": "Diccionario y recursos para mejorar el vocabulario y la gramática en inglés."
+  },
+  {
+    "id": 72,
+    "name": "EngVid",
+    "url": "https://www.engvid.com/",
+    "category": "english",
+    "subcategory": "grammarVocabulary",
+    "description": "Videos gratuitos de profesores nativos para aprender gramática, vocabulario y consejos de inglés."
+  },
+  {
+    "id": 73,
+    "name": "BBC Learning English",
+    "url": "https://www.bbc.co.uk/learningenglish",
+    "category": "english",
+    "subcategory": "listeningSpeaking",
+    "description": "Recursos gratuitos de la BBC para mejorar comprensión auditiva, pronunciación y expresión oral en inglés."
+  },
+  {
+    "id": 74,
+    "name": "TED Talks",
+    "url": "https://www.ted.com/talks",
+    "category": "english",
+    "subcategory": "listeningSpeaking",
+    "description": "Charlas inspiradoras en inglés con subtítulos, ideales para practicar listening y ampliar vocabulario."
+  },
+  {
+    "id": 75,
+    "name": "Forvo",
+    "url": "https://forvo.com",
+    "category": "english",
+    "subcategory": "listeningSpeaking",
+    "description": "Diccionario de pronunciación colaborativo, útil para escuchar cómo se pronuncian palabras en inglés por hablantes nativos."
+  },
+  {
+    "id": 76,
+    "name": "EnglishCentral",
+    "url": "https://www.englishcentral.com",
+    "category": "english",
+    "subcategory": "listeningSpeaking",
+    "description": "Plataforma para mejorar listening y speaking con videos interactivos y reconocimiento de voz."
+  },
+  {
+    "id": 77,
+    "name": "Tandem",
+    "url": "https://tandem.net/es",
+    "category": "english",
+    "subcategory": "listeningSpeaking",
+    "description": "App para practicar inglés conversando con hablantes nativos de todo el mundo."
+  },
+  {
+    "id": 78,
+    "name": "Hemingway Editor",
+    "url": "https://www.hemingwayapp.com",
+    "category": "english",
+    "subcategory": "writing",
+    "description": "Editor que ayuda a mejorar la claridad y legibilidad de tus textos en inglés."
+  },
+  {
+    "id": 79,
+    "name": "ProWritingAid",
+    "url": "https://prowritingaid.com",
+    "category": "english",
+    "subcategory": "writing",
+    "description": "Herramienta para corregir gramática, estilo y mejorar la escritura en inglés."
+  },
+  {
+    "id": 80,
+    "name": "LanguageTool",
+    "url": "https://languagetool.org",
+    "category": "english",
+    "subcategory": "writing",
+    "description": "Corrector gramatical y de estilo para textos en inglés y otros idiomas."
+  },
+  {
+    "id": 81,
+    "name": "Readable",
+    "url": "https://readable.com",
+    "category": "english",
+    "subcategory": "writing",
+    "description": "Herramienta para analizar y mejorar la legibilidad de textos en inglés."
+  },
+  {
+    "id": 82,
+    "name": "News in Levels",
+    "url": "https://www.newsinlevels.com",
+    "category": "english",
+    "subcategory": "readingComprehension",
+    "description": "Noticias en inglés adaptadas a diferentes niveles de dificultad para practicar lectura y comprensión."
+  },
+  {
+    "id": 83,
+    "name": "Simple English Wikipedia",
+    "url": "https://simple.wikipedia.org",
+    "category": "english",
+    "subcategory": "readingComprehension",
+    "description": "Versión simplificada de Wikipedia, ideal para practicar lectura y aprender vocabulario básico en inglés."
+  },
+  {
+    "id": 84,
+    "name": "Breaking News English",
+    "url": "https://breakingnewsenglish.com",
+    "category": "english",
+    "subcategory": "readingComprehension",
+    "description": "Lecciones de inglés basadas en noticias actuales, con ejercicios de comprensión y vocabulario."
+  },
+  {
+    "id": 85,
+    "name": "Project Gutenberg",
+    "url": "https://www.gutenberg.org",
+    "category": "english",
+    "subcategory": "readingComprehension",
+    "description": "Biblioteca digital gratuita con miles de libros clásicos en inglés para practicar lectura."
+  },
+  {
+    "id": 86,
+    "name": "curso-ingles",
+    "url": "https://www.curso-ingles.com/",
+    "category": "english",
+    "subcategory": "courseFree",
+    "description": "Curso gratuito de inglés online con lecciones, ejercicios y recursos para todos los niveles."
+  },
+  {
+    "id": 87,
+    "name": "YouGlish",
+    "url": "https://youglish.com",
+    "category": "english",
+    "subcategory": "pronunciation",
+    "description": "Buscador de pronunciación en videos reales, útil para escuchar palabras en diferentes acentos y contextos."
+  },
+  {
+    "id": 88,
+    "name": "Elsa Speak",
+    "url": "https://elsaspeak.com",
+    "category": "english",
+    "subcategory": "pronunciation",
+    "description": "App para mejorar la pronunciación en inglés con ejercicios personalizados y feedback instantáneo."
+  },
+  {
+    "id": 89,
+    "name": "PlayPhrase",
+    "url": "http://playphrase.me",
+    "category": "english",
+    "subcategory": "pronunciation",
+    "description": "Herramienta para escuchar frases en inglés extraídas de películas y series, ideal para practicar pronunciación y entonación."
   }
 ]
