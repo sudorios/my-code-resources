@@ -72,9 +72,7 @@
         <div class="border-b border-slate-00 flex-1"></div>
       </div>
     </div>
-<div class="flex flex-wrap justify-center gap-4">
-
-    >
+    <div class="flex flex-wrap justify-center gap-4">
       @for (item of category; track item.id) {
       <a
         class="common-class group transition-colors duration-300 relative p-6"
@@ -99,51 +97,31 @@
     [subcategoryNames]="subcategoryNames"
   >
   </app-category>
-  <section class="lg:max-w-full md:max-w-2xl">
-    <div class="flex items-center mb-6 mt-10">
-      <h1 class="text-3xl font-bold mr-2 text-white">
-        Nuestras Recomendaciones
-      </h1>
-      <div class="border-b border-slate-00 flex-1"></div>
+<section class="bg-body p-6 mt-10">
+    <h2 class="text-3xl font-bold text-white text-center mb-4">
+      ¡Apoya nuestro proyecto!
+    </h2>
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-slate-400 mb-6">
+        Si te ha gustado lo que ofrecemos, puedes ayudarnos a seguir mejorando la plataforma. Tu apoyo es clave para seguir creando contenido y nuevas funcionalidades para la comunidad.
+      </p>
+
+      <a
+        href="https://ko-fi.com/danniel_"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="common-class transition-colors duration-300 relative"
+      >
+        ¡Dona Ahora!
+      </a>
     </div>
-    <div
-      class="bg-gray-800 p-6 mt-10 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
-    >
-      <div class="rounded-lg overflow-hidden">
-        <img
-          src="/assets/posgress.png"
-          alt="Postgres.new"
-          class="object-cover w-full h-50 transition hover:scale-100 duration-500 sm:h-58 md:scale-110 md:group-hover:scale-105"
-          loading="lazy"
-        />
-        <div class="pt-9">
-          <h3 class="text-xl font-semibold text-gold">Postgres.new</h3>
-          <p class="text-gray-800 dark:text-gray-300 mt-1">
-            Herramienta que simplifica la creación y gestión de bases de datos.
-            Con su interfaz intuitiva y potente inteligencia artificial, puedes
-            crear y modificar tablas con lenguaje natural, generar datos de
-            ejemplo, visualizar diagramas de relaciones y exportar tus bases de
-            datos para desplegarlas donde quieras.
-          </p>
-        </div>
-      </div>
-      <div class="rounded-lg overflow-hidden">
-        <img
-          src="/assets/pythontutor.png"
-          alt="pythontutor"
-          class="object-cover w-full h-50 transition hover:scale-100 duration-500 sm:h-58 md:scale-110 md:group-hover:scale-105"
-          loading="lazy"
-        />
-        <div class="pt-9">
-          <h3 class="text-xl font-semibold text-gold">Python Tutor</h3>
-          <p class="text-gray-800 dark:text-gray-300 mt-1">
-            Herramienta educativa en línea que permite a los usuarios visualizar
-            la ejecución de código Python y otros lenguajes de programación paso
-            a paso. Está diseñada para ayudar a estudiantes, principiantes y
-            desarrolladores a comprender cómo se ejecuta su código.
-          </p>
-        </div>
-      </div>
+
+    <div class="flex items-center justify-center mt-10">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/888/888879.png"
+        alt="Donate Icon"
+        class="max-w-[90%] max-h-48 rounded-lg"
+      />
     </div>
   </section>
 </main>

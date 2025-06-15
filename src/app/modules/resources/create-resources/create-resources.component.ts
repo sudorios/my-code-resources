@@ -29,7 +29,7 @@ export class CreateResourcesComponent {
     this.remainingCharacters = this.maxLength - (input.value?.length || 0);
   }
 
-  onSubmit() {
+ /* onSubmit() {
     this.dataService.addResource(this.newResource)
       .then(() => {
         console.log('Recurso creado exitosamente');
@@ -37,6 +37,6 @@ export class CreateResourcesComponent {
       .catch(error => {
         console.error('Error al agregar el recurso:', error);
       });
-  }
+  }*/
 
 }

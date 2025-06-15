@@ -4,7 +4,6 @@ import { Resources } from '../interfaces/resources.interface';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Category } from '~/interfaces/category.interface';
-import { collection, addDoc, Firestore } from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +14,7 @@ export class DataService {
   private jsonUrl = 'assets/data.json';
   private dataSubject = new BehaviorSubject<Resources | null>(null);
 
-  constructor(private http: HttpClient, private firestore: Firestore) { }
+  constructor(private http: HttpClient) { }
 
   //Category
   private categoryMap: { [key: string]: string } = {
@@ -126,18 +125,6 @@ export class DataService {
   }
   getData(): Observable<Resources | null> {
     return this.dataSubject.asObservable();
-  }
-
-
-  addResource(resource: Resources): Promise<void> {
-    const resourceRef = collection(this.firestore, 'resources');
-    return addDoc(resourceRef, resource)
-      .then(() => {
-        console.log('Recurso agregado correctamente');
-      })
-      .catch((error) => {
-        console.error('Error al agregar el recurso:', error);
-      });
   }
   
 }
