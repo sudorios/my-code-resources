@@ -73,7 +73,7 @@
       </div>
     </div>
     <div class="flex flex-wrap justify-center gap-4">
-      @for (item of category; track item.id) {
+      @for (item of category; track $index) {
       <a
         class="common-class group transition-colors duration-300 relative p-6"
         [routerLink]="['/categoria', item.id]"

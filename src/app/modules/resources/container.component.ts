@@ -1,4 +1,6 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -26,22 +28,25 @@ import { Category } from '~/interfaces/category.interface';
 })
 
 export class ContainerComponent implements OnInit {
-  //State
+
   state: number = 0;
   isMobile: boolean = false;
-  //Category
   category: Category[] = [];
   categories: { category: string, subcategories: string[] }[] = [];
   isCategorySelected: boolean = false;
 
-  //Subcategory
   subcategoryNames: { [key: string]: string } = {};
 
-  //Data
+  
   data: Resources[] = [];
   filteredData: { [subcategory: string]: Resources[] } = {};
 
-  constructor(private dataService: DataService, private router: Router) { }
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    private route: ActivatedRoute,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { }
   
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -53,13 +58,25 @@ export class ContainerComponent implements OnInit {
     this.category = this.dataService.getCategories();
     this.categories = this.dataService.getCategoriesData();
     this.buildSubcategoryNames();
+
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      const categoria = params.get('categoria');
+      if (categoria) {
+        const idx = this.categories.findIndex(cat => cat.category === categoria);
+        if (idx !== -1) {
+          this.updateEstado(idx + 1, false);
+        }
+      }
+    });
   }
 
   private checkScreenSize() {
-    this.isMobile = window.innerWidth < 768; 
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobile = window.innerWidth < 768;
+    }
   }
 
-  updateEstado(newEstado: number) {
+  updateEstado(newEstado: number, navigate: boolean = true) {
     this.isCategorySelected = true;
     this.state = newEstado;
     const categoryObj = this.getCategoryByState(newEstado);
@@ -67,7 +84,9 @@ export class ContainerComponent implements OnInit {
       this.dataService.getJson(categoryObj.category).subscribe(data => {
         this.data = data;
         this.filteredData = this.filterDataBySubcategories(data, categoryObj.subcategories);
-        this.router.navigate([`/categoria/${categoryObj.category}`]);
+        if (navigate) {
+          this.router.navigate([`/categoria/${categoryObj.category}`]);
+        }
       });
     }
   }
